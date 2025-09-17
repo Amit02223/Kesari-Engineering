@@ -1,103 +1,102 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section className="section">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            Industrial <span className="text-amber-500">M.S Fabrication</span>,
+            Electrical, Duct & Civil Works
+          </h1>
+          <p className="mt-4 text-lg text-zinc-600">
+            KESARI Engineering delivers end-to-end engineering services —
+            structural M.S fabrication, electrical installations, HVAC duct work
+            & cleaning, and civil construction. On-time, safety-first, and
+            transparent pricing.
+          </p>
+          <div className="mt-6 flex gap-3">
+            <Link
+              href="/contact"
+              className="px-6 py-3 rounded-lg border-2 border-amber-500 text-amber-500 font-semibold hover:bg-amber-500 hover:text-white transition duration-300 shadow-sm"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/services"
+              className="px-6 py-3 rounded-lg border-2 border-amber-500 text-amber-500 font-semibold hover:bg-amber-500 hover:text-white transition duration-300 shadow-sm"
+            >
+              Explore Services
+            </Link>
+          </div>
+          <ul className="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <li>✔ MSME Registered</li>
+            <li>✔ GST: 05QBNPS7329C1Z2</li>
+            <li>✔ Safety-first execution</li>
+            <li>✔ Haridwar & nearby regions</li>
+          </ul>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="aspect-video rounded-2xl border overflow-hidden">
+          <img
+            src="https://www.goodwin.edu/enews/wp-content/uploads/2022/12/why-work-in-manufacturing-tiny-scaled.jpg"
+            alt="Industrial work"
+            className="w-full h-full object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </div>
+
+      <section className="mt-16">
+        <h2 className="text-2xl font-semibold">What we do</h2>
+        <p className="text-zinc-600 mt-2 max-w-3xl">
+          We design, fabricate, install, and maintain. Projects across plants,
+          factories, commercial spaces, and residences — strict adherence to
+          safety & quality.
+        </p>
+
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              title: "M.S Fabrication",
+              img: "https://5.imimg.com/data5/MB/EV/MY-5963684/ms-structures-3-500x500.jpg",
+              href: "/services#ms-fabrication",
+            },
+            {
+              title: "Electrical Works",
+              img: "https://5.imimg.com/data5/CM/RX/WY/SELLER-43924254/industrial-elec-work-500x500.png",
+              href: "/services#electrical-works",
+            },
+            {
+              title: "Duct Install & Cleaning",
+              img: "https://mega.com.sg/wp-content/uploads/2020/12/duct.jpg",
+              href: "/services#duct-works",
+            },
+            {
+              title: "Civil Works",
+              img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+              href: "/services#civil-works",
+            },
+          ].map((s) => (
+            <Link
+              key={s.title}
+              href={s.href}
+              className="card hover:shadow-lg transition"
+            >
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border mb-3">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-semibold">{s.title}</h3>
+              <p className="text-sm text-zinc-600 mt-1">
+                Click to view details
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </section>
   );
 }
